@@ -10,16 +10,15 @@ public class CustomerAddress {
     private String streetName;
     private String suburb;
     private String postalCode;
-    private String customerID;
+    private Customer customerId;
     public CustomerAddress(Builder builder) {
         this.houseNumber = builder.houseNumber;
         this.streetName = builder.streetName;
         this.suburb = builder.suburb;
         this.postalCode = builder.postalCode;
-        this.customerID = builder.customerID;
+        this.customerId = builder.customerId;
     }
-    public CustomerAddress() {
-    }
+    public CustomerAddress() {}
 
     public String getHouseNumber() {
         return houseNumber;
@@ -37,8 +36,8 @@ public class CustomerAddress {
         return postalCode;
     }
 
-    public String customerID() {
-        return customerID;
+    public Customer customerID() {
+        return customerId;
     }
     @Override
     public String toString() {
@@ -47,7 +46,7 @@ public class CustomerAddress {
                 ", streetName='" + streetName + '\'' +
                 ", suburb='" + suburb + '\'' +
                 ", postalCode='" + postalCode + '\'' +
-                ", customerID='" + customerID + '\'' +
+                ", customerID='" + customerId + '\'' +
                 '}';
     }
     public static class Builder {
@@ -55,29 +54,21 @@ public class CustomerAddress {
         private String streetName;
         private String suburb;
         private String postalCode;
-        private String customerID;
+        private Customer customerId;
         public Builder setHouseNumber(String houseNumber) {
             this.houseNumber = houseNumber;
             return this;
         }
-
         public Builder setStreetName(String streetName) {
             this.streetName = streetName;
             return this;
         }
-
         public Builder setSuburb(String suburb) {
             this.suburb = suburb;
             return this;
         }
-
         public Builder setPostalCode(String postalCode) {
             this.postalCode = postalCode;
-            return this;
-        }
-
-        public Builder setCustomerID(String customerID) {
-            this.customerID = customerID;
             return this;
         }
         public Builder copy(CustomerAddress address) {
@@ -85,7 +76,7 @@ public class CustomerAddress {
             this.streetName = address.streetName;
             this.suburb = address.suburb;
             this.postalCode = address.postalCode;
-            this.customerID = address.customerID;
+            this.customerId = address.customerId;
             return this;
         }
         public CustomerAddress build() {
