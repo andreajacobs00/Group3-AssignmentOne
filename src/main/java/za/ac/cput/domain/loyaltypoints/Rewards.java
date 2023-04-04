@@ -15,14 +15,13 @@ public class Rewards {
 
     private int points;
 
-    private Rewards (Rewards rewards) {}
-
-    private Rewards(Builder builder){
+    private Rewards(Builder builder) {
         this.tier = builder.tier;
         this.rewardsId = builder.rewardsId;
         this.points = builder.points;
         this.customerId = builder.customerId;
     }
+
 
     public Tier getTier() {
         return tier;
