@@ -11,6 +11,8 @@ public class Package {
     private String packageId;
     private String packageDescription;
 
+    public Package() {}
+
     private Package(Builder builder) {
         this.packageId = builder.packageId;
         this.packageDescription = builder.packageDescription;
