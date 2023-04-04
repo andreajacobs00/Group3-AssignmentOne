@@ -3,7 +3,7 @@
  * Author: Haydn Abrahams
  * Date: 04 April 2023
  */
-package domain;
+package za.ac.cput.domain;
 
 public class CustomerAddress {
     private String houseNumber;
@@ -11,6 +11,7 @@ public class CustomerAddress {
     private String suburb;
     private String postalCode;
     private Customer customerId;
+
     public CustomerAddress(Builder builder) {
         this.houseNumber = builder.houseNumber;
         this.streetName = builder.streetName;
@@ -18,6 +19,7 @@ public class CustomerAddress {
         this.postalCode = builder.postalCode;
         this.customerId = builder.customerId;
     }
+
     public CustomerAddress() {}
 
     public String getHouseNumber() {
@@ -39,6 +41,7 @@ public class CustomerAddress {
     public Customer customerID() {
         return customerId;
     }
+
     @Override
     public String toString() {
         return "CustomerAddress{" +
@@ -49,6 +52,7 @@ public class CustomerAddress {
                 ", customerID='" + customerId + '\'' +
                 '}';
     }
+
     public static class Builder {
         private String houseNumber;
         private String streetName;
@@ -59,18 +63,22 @@ public class CustomerAddress {
             this.houseNumber = houseNumber;
             return this;
         }
+
         public Builder setStreetName(String streetName) {
             this.streetName = streetName;
             return this;
         }
+
         public Builder setSuburb(String suburb) {
             this.suburb = suburb;
             return this;
         }
+
         public Builder setPostalCode(String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
+
         public Builder copy(CustomerAddress address) {
             this.houseNumber = address.houseNumber;
             this.streetName = address.streetName;
@@ -79,6 +87,7 @@ public class CustomerAddress {
             this.customerId = address.customerId;
             return this;
         }
+
         public CustomerAddress build() {
             return new CustomerAddress(this);
         }

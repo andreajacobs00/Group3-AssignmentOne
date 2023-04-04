@@ -1,4 +1,9 @@
-package domain;
+/*
+ * Address POJO Class
+ * Author: Haydn Abrahams
+ * Date: 04 April 2023
+ */
+package za.ac.cput.domain;
 
 import java.util.Date;
 
@@ -8,6 +13,7 @@ public class UserDetails {
     private Date dateOfReg;
     private Date loginDate;
     private String UserPassword;
+
     public UserDetails(Builder builder) {
         this.userID = builder.userID;
         this.customerId = builder.customerId;
@@ -47,6 +53,7 @@ public class UserDetails {
                 ", UserPassword='" + UserPassword + '\'' +
                 '}';
     }
+
     public static class Builder {
         private String userID;
         private Customer customerId;
@@ -58,7 +65,6 @@ public class UserDetails {
             this.userID = userID;
             return this;
         }
-
 
         public Builder setDateOfReg(Date dateOfReg) {
             this.dateOfReg = dateOfReg;
@@ -74,6 +80,7 @@ public class UserDetails {
             this.UserPassword = UserPassword;
             return this;
         }
+
         public UserDetails.Builder copy(UserDetails details) {
             this.userID = details.userID;
             this.customerId = details.customerId;
@@ -82,6 +89,7 @@ public class UserDetails {
             this.UserPassword = details.UserPassword;
             return this;
         }
+
         public UserDetails build() {
             return new UserDetails(this);
         }
