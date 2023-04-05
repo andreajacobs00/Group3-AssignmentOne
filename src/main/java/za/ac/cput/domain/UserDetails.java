@@ -9,14 +9,14 @@ import java.util.Date;
 
 public class UserDetails {
     private String userID;
-    private Customer customerId;
+    //private Customer cust_ID;
     private Date dateOfReg;
     private Date loginDate;
     private String UserPassword;
 
     public UserDetails(Builder builder) {
         this.userID = builder.userID;
-        this.customerId = builder.customerId;
+        //this.cust_ID = builder.cust_ID;
         this.dateOfReg = builder.dateOfReg;
         this.loginDate = builder.loginDate;
         this.UserPassword = builder.UserPassword;
@@ -27,9 +27,9 @@ public class UserDetails {
         return userID;
     }
 
-    public Customer getCustomerID() {
-        return customerId;
-    }
+    /* public Customer getCust_ID() {
+        return cust_ID;
+    } */
 
     public Date getDateOfReg() {
         return dateOfReg;
@@ -47,7 +47,7 @@ public class UserDetails {
     public String toString() {
         return "UserDetails{" +
                 "userID='" + userID + '\'' +
-                ", customerID='" + customerId + '\'' +
+                //", customerID='" + cust_ID + '\'' +
                 ", dateOfReg=" + dateOfReg +
                 ", loginDate=" + loginDate +
                 ", UserPassword='" + UserPassword + '\'' +
@@ -56,7 +56,7 @@ public class UserDetails {
 
     public static class Builder {
         private String userID;
-        private Customer customerId;
+        //private Customer cust_ID;
         private Date dateOfReg;
         private Date loginDate;
         private String UserPassword;
@@ -83,7 +83,7 @@ public class UserDetails {
 
         public UserDetails.Builder copy(UserDetails details) {
             this.userID = details.userID;
-            this.customerId = details.customerId;
+            //this.customerId = details.cust_ID;
             this.dateOfReg = details.dateOfReg;
             this.loginDate = details.loginDate;
             this.UserPassword = details.UserPassword;
