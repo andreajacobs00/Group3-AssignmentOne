@@ -5,14 +5,14 @@
 
 package za.ac.cput.factory.packagesoffered;
 
-import za.ac.cput.domain.packagesoffered.PackagesOffered;
+import za.ac.cput.domain.packageoffered.PackageOffered;
 import za.ac.cput.util.Helper;
 
-public class PackagesOfferedFactory {
-    public static PackagesOffered packagesOffered(String packageDescription) {
+public class PackageOfferedFactory {
+    public static PackageOffered packagesOffered(String packageDescription) {
         String packageId = Helper.generateId();
 
-        return new PackagesOffered.Builder().setPackageId(packageId)
+        return new PackageOffered.Builder().setPackageId(packageId)
                 .setPackageDescription(packageDescription)
                 .build();
     }

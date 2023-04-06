@@ -3,17 +3,17 @@
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packagesoffered;
+package za.ac.cput.domain.packageoffered;
 
 import java.util.Objects;
 
-public class ProWashPackagesOffered extends PackagesOffered {
+public class ProWashPackageOffered extends PackageOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private ProWashPackagesOffered(Builder builder){
+    private ProWashPackageOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class ProWashPackagesOffered extends PackagesOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        ProWashPackagesOffered that = (ProWashPackagesOffered) o;
+        ProWashPackageOffered that = (ProWashPackageOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -84,21 +84,21 @@ public class ProWashPackagesOffered extends PackagesOffered {
             return this;
         }
 
+        public ProWashPackageOffered build() {
+            return new ProWashPackageOffered(this);
+        }
+
         public Builder setPackagePrice(double packagePrice) {
             this.packagePrice = packagePrice;
             return this;
         }
 
-        public ProWashPackagesOffered copy (ProWashPackagesOffered proWashPackage) {
+        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {
             this.packageId = proWashPackage.packageId;
             this.packageName = proWashPackage.packageName;
             this.packageDescription = proWashPackage.packageDescription;
             this.packagePrice = proWashPackage.packagePrice;
             return null;
-        }
-
-        public ProWashPackagesOffered build(Builder builder) {
-            return new ProWashPackagesOffered(this);
         }
     }
 }

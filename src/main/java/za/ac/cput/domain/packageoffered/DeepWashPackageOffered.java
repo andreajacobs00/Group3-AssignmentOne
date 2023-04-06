@@ -3,17 +3,17 @@
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packagesoffered;
+package za.ac.cput.domain.packageoffered;
 
 import java.util.Objects;
 
-public class DeepWashPackagesOffered extends PackagesOffered {
+public class DeepWashPackageOffered extends PackageOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private DeepWashPackagesOffered(Builder builder){
+    private DeepWashPackageOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class DeepWashPackagesOffered extends PackagesOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        DeepWashPackagesOffered that = (DeepWashPackagesOffered) o;
+        DeepWashPackageOffered that = (DeepWashPackageOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -84,21 +84,21 @@ public class DeepWashPackagesOffered extends PackagesOffered {
             return this;
         }
 
+        public DeepWashPackageOffered build() {
+            return new DeepWashPackageOffered(this);
+        }
+
         public Builder setPackagePrice(double packagePrice) {
             this.packagePrice = packagePrice;
             return this;
         }
 
-        public DeepWashPackagesOffered copy (DeepWashPackagesOffered deepWashPackage) {
+        public DeepWashPackageOffered copy (DeepWashPackageOffered deepWashPackage) {
             this.packageId = deepWashPackage.packageId;
             this.packageName = deepWashPackage.packageName;
             this.packageDescription = deepWashPackage.packageDescription;
             this.packagePrice = deepWashPackage.packagePrice;
             return null;
-        }
-
-        public DeepWashPackagesOffered build(Builder builder) {
-            return new DeepWashPackagesOffered(this);
         }
     }
 }

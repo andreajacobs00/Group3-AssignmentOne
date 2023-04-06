@@ -3,17 +3,17 @@
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packagesoffered;
+package za.ac.cput.domain.packageoffered;
 
 import java.util.Objects;
 
-public class BasicCleanPackagesOffered extends PackagesOffered {
+public class BasicCleanPackageOffered extends PackageOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private BasicCleanPackagesOffered(Builder builder){
+    private BasicCleanPackageOffered(Builder builder){
         super();
         this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class BasicCleanPackagesOffered extends PackagesOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        BasicCleanPackagesOffered that = (BasicCleanPackagesOffered) o;
+        BasicCleanPackageOffered that = (BasicCleanPackageOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -84,8 +84,8 @@ public class BasicCleanPackagesOffered extends PackagesOffered {
             return this;
         }
 
-        public BasicCleanPackagesOffered build() {
-            return new BasicCleanPackagesOffered(this);
+        public BasicCleanPackageOffered build() {
+            return new BasicCleanPackageOffered(this);
         }
 
         public Builder setPackagePrice(double packagePrice) {
@@ -93,7 +93,7 @@ public class BasicCleanPackagesOffered extends PackagesOffered {
             return this;
         }
 
-        public BasicCleanPackagesOffered copy (BasicCleanPackagesOffered basicCleanPackage) {
+        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {
             this.packageId = basicCleanPackage.packageId;
             this.packageName = basicCleanPackage.packageName;
             this.packageDescription = basicCleanPackage.packageDescription;

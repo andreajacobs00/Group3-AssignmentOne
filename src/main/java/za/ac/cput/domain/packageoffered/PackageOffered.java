@@ -3,17 +3,17 @@
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packagesoffered;
+package za.ac.cput.domain.packageoffered;
 
 import java.util.Objects;
 
-public class PackagesOffered {
+public class PackageOffered {
     private String packageId;
     private String packageDescription;
 
-    public PackagesOffered() {}
+    public PackageOffered() {}
 
-    private PackagesOffered(Builder builder) {
+    private PackageOffered(Builder builder) {
         this.packageId = builder.packageId;
         this.packageDescription = builder.packageDescription;
     }
@@ -30,8 +30,8 @@ public class PackagesOffered {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PackagesOffered aPackagesOffered = (PackagesOffered) o;
-        return Objects.equals(packageId, aPackagesOffered.packageId);
+        PackageOffered aPackageOffered = (PackageOffered) o;
+        return Objects.equals(packageId, aPackageOffered.packageId);
     }
 
     @Override
@@ -56,8 +56,8 @@ public class PackagesOffered {
             return this;
         }
 
-        public PackagesOffered build() {
-            return new PackagesOffered(this);
+        public PackageOffered build() {
+            return new PackageOffered(this);
 
         }
 
@@ -66,7 +66,7 @@ public class PackagesOffered {
             return this;
         }
 
-        public PackagesOffered copy(Builder builder) {
+        public PackageOffered copy(Builder builder) {
             this.packageId = builder.packageId;
             this.packageDescription = builder.packageDescription;
             return null;
