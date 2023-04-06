@@ -7,13 +7,13 @@ package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class PackageOffered {
+public class PackagesOffered {
     private String packageId;
     private String packageDescription;
 
-    public PackageOffered() {}
+    public PackagesOffered() {}
 
-    private PackageOffered(Builder builder) {
+    private PackagesOffered(Builder builder) {
         this.packageId = builder.packageId;
         this.packageDescription = builder.packageDescription;
     }
@@ -30,8 +30,8 @@ public class PackageOffered {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PackageOffered aPackageOffered = (PackageOffered) o;
-        return Objects.equals(packageId, aPackageOffered.packageId);
+        PackagesOffered aPackagesOffered = (PackagesOffered) o;
+        return Objects.equals(packageId, aPackagesOffered.packageId);
     }
 
     @Override
@@ -56,20 +56,20 @@ public class PackageOffered {
             return this;
         }
 
+        public PackagesOffered build() {
+            return new PackagesOffered(this);
+
+        }
+
         public Builder setPackageDescription(String packageDescription) {
             this.packageDescription = packageDescription;
             return this;
         }
 
-        public PackageOffered copy(Builder builder) {
+        public PackagesOffered copy(Builder builder) {
             this.packageId = builder.packageId;
             this.packageDescription = builder.packageDescription;
             return null;
-        }
-
-        public PackageOffered build(Builder builder) {
-            return new PackageOffered(this);
-
         }
     }
 }

@@ -1,4 +1,4 @@
-/** BasicCleanPackage.java
+/** ProWashPackage.java
  *  This is a subclass of package
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
@@ -7,13 +7,13 @@ package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class BasicCleanPackageOffered extends PackageOffered {
+public class ProWashPackagesOffered extends PackagesOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private BasicCleanPackageOffered(Builder builder){
+    private ProWashPackagesOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class BasicCleanPackageOffered extends PackageOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        BasicCleanPackageOffered that = (BasicCleanPackageOffered) o;
+        ProWashPackagesOffered that = (ProWashPackagesOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -55,7 +55,7 @@ public class BasicCleanPackageOffered extends PackageOffered {
 
     @Override
     public String toString() {
-        return "BasicCleanPackage{" +
+        return "ProWashPackage{" +
                 "packageId='" + packageId + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", packageDescription='" + packageDescription + '\'' +
@@ -89,16 +89,16 @@ public class BasicCleanPackageOffered extends PackageOffered {
             return this;
         }
 
-        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {
-            this.packageId = basicCleanPackage.packageId;
-            this.packageName = basicCleanPackage.packageName;
-            this.packageDescription = basicCleanPackage.packageDescription;
-            this.packagePrice = basicCleanPackage.packagePrice;
+        public ProWashPackagesOffered copy (ProWashPackagesOffered proWashPackage) {
+            this.packageId = proWashPackage.packageId;
+            this.packageName = proWashPackage.packageName;
+            this.packageDescription = proWashPackage.packageDescription;
+            this.packagePrice = proWashPackage.packagePrice;
             return null;
         }
 
-        public BasicCleanPackageOffered build(Builder builder) {
-            return new BasicCleanPackageOffered(this);
+        public ProWashPackagesOffered build(Builder builder) {
+            return new ProWashPackagesOffered(this);
         }
     }
 }

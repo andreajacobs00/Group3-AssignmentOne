@@ -1,4 +1,4 @@
-/** DeepWashPackage.java
+/** BasicCleanPackage.java
  *  This is a subclass of package
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
@@ -7,15 +7,15 @@ package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class DeepWashPackageOffered extends PackageOffered {
+public class BasicCleanPackagesOffered extends PackagesOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private DeepWashPackageOffered(Builder builder){
+    private BasicCleanPackagesOffered(Builder builder){
         super();
-        //this.packageId = builder.packageId;
+        this.packageId = builder.packageId;
         this.packageName = builder.packageName;
         this.packageDescription = builder.packageDescription;
         this.packagePrice = builder.packagePrice;
@@ -44,7 +44,7 @@ public class DeepWashPackageOffered extends PackageOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        DeepWashPackageOffered that = (DeepWashPackageOffered) o;
+        BasicCleanPackagesOffered that = (BasicCleanPackagesOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -55,7 +55,7 @@ public class DeepWashPackageOffered extends PackageOffered {
 
     @Override
     public String toString() {
-        return "DeepWashPackage{" +
+        return "BasicCleanPackage{" +
                 "packageId='" + packageId + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", packageDescription='" + packageDescription + '\'' +
@@ -84,21 +84,21 @@ public class DeepWashPackageOffered extends PackageOffered {
             return this;
         }
 
+        public BasicCleanPackagesOffered build() {
+            return new BasicCleanPackagesOffered(this);
+        }
+
         public Builder setPackagePrice(double packagePrice) {
             this.packagePrice = packagePrice;
             return this;
         }
 
-        public DeepWashPackageOffered copy (DeepWashPackageOffered deepWashPackage) {
-            this.packageId = deepWashPackage.packageId;
-            this.packageName = deepWashPackage.packageName;
-            this.packageDescription = deepWashPackage.packageDescription;
-            this.packagePrice = deepWashPackage.packagePrice;
+        public BasicCleanPackagesOffered copy (BasicCleanPackagesOffered basicCleanPackage) {
+            this.packageId = basicCleanPackage.packageId;
+            this.packageName = basicCleanPackage.packageName;
+            this.packageDescription = basicCleanPackage.packageDescription;
+            this.packagePrice = basicCleanPackage.packagePrice;
             return null;
-        }
-
-        public DeepWashPackageOffered build(Builder builder) {
-            return new DeepWashPackageOffered(this);
         }
     }
 }

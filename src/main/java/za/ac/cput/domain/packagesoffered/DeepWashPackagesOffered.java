@@ -1,4 +1,4 @@
-/** ProWashPackage.java
+/** DeepWashPackage.java
  *  This is a subclass of package
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
@@ -7,13 +7,13 @@ package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class ProWashPackageOffered extends PackageOffered {
+public class DeepWashPackagesOffered extends PackagesOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private ProWashPackageOffered(Builder builder){
+    private DeepWashPackagesOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class ProWashPackageOffered extends PackageOffered {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        ProWashPackageOffered that = (ProWashPackageOffered) o;
+        DeepWashPackagesOffered that = (DeepWashPackagesOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -55,7 +55,7 @@ public class ProWashPackageOffered extends PackageOffered {
 
     @Override
     public String toString() {
-        return "ProWashPackage{" +
+        return "DeepWashPackage{" +
                 "packageId='" + packageId + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", packageDescription='" + packageDescription + '\'' +
@@ -89,16 +89,16 @@ public class ProWashPackageOffered extends PackageOffered {
             return this;
         }
 
-        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {
-            this.packageId = proWashPackage.packageId;
-            this.packageName = proWashPackage.packageName;
-            this.packageDescription = proWashPackage.packageDescription;
-            this.packagePrice = proWashPackage.packagePrice;
+        public DeepWashPackagesOffered copy (DeepWashPackagesOffered deepWashPackage) {
+            this.packageId = deepWashPackage.packageId;
+            this.packageName = deepWashPackage.packageName;
+            this.packageDescription = deepWashPackage.packageDescription;
+            this.packagePrice = deepWashPackage.packagePrice;
             return null;
         }
 
-        public ProWashPackageOffered build(Builder builder) {
-            return new ProWashPackageOffered(this);
+        public DeepWashPackagesOffered build(Builder builder) {
+            return new DeepWashPackagesOffered(this);
         }
     }
 }
