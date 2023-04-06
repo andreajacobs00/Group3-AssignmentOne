@@ -1,19 +1,19 @@
-/** DeepWashPackage.java
+/** BasicCleanPackage.java
  *  This is a subclass of package
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packages;
+package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class DeepWashPackage extends Package {
+public class BasicCleanPackageOffered extends PackageOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private DeepWashPackage(Builder builder){
+    private BasicCleanPackageOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class DeepWashPackage extends Package {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        DeepWashPackage that = (DeepWashPackage) o;
+        BasicCleanPackageOffered that = (BasicCleanPackageOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -55,7 +55,7 @@ public class DeepWashPackage extends Package {
 
     @Override
     public String toString() {
-        return "DeepWashPackage{" +
+        return "BasicCleanPackage{" +
                 "packageId='" + packageId + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", packageDescription='" + packageDescription + '\'' +
@@ -89,16 +89,16 @@ public class DeepWashPackage extends Package {
             return this;
         }
 
-        public DeepWashPackage copy (DeepWashPackage deepWashPackage) {
-            this.packageId = deepWashPackage.packageId;
-            this.packageName = deepWashPackage.packageName;
-            this.packageDescription = deepWashPackage.packageDescription;
-            this.packagePrice = deepWashPackage.packagePrice;
+        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {
+            this.packageId = basicCleanPackage.packageId;
+            this.packageName = basicCleanPackage.packageName;
+            this.packageDescription = basicCleanPackage.packageDescription;
+            this.packagePrice = basicCleanPackage.packagePrice;
             return null;
         }
 
-        public DeepWashPackage build(Builder builder) {
-            return new DeepWashPackage(this);
+        public BasicCleanPackageOffered build(Builder builder) {
+            return new BasicCleanPackageOffered(this);
         }
     }
 }

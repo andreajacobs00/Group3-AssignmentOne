@@ -5,6 +5,8 @@
 
 package za.ac.cput.domain.loyaltypoints;
 
+import za.ac.cput.domain.Customer;
+
 import java.util.Objects;
 
 public class Rewards {
@@ -64,7 +66,7 @@ public class Rewards {
 
     public static class Builder {
         private Tier tier;
-        private String rewardsId
+        private String rewardsId;
         private Customer customerId;
         private int points;
 
@@ -78,9 +80,18 @@ public class Rewards {
             return this;
         }
 
+        public Builder setCustomerId(Customer customerId) {
+            this.customerId = customerId;
+            return this;
+        }
+
         public Builder setPoints(int points) {
             this.points = points;
             return this;
+        }
+
+        public Rewards build() {
+            return new Rewards(this);
         }
     }
 
@@ -91,10 +102,4 @@ public class Rewards {
         this.points = rewards.points;
         return null;
     }
-
-    public Rewards build(Builder builder) {
-        return new Rewards(this);
-    }
-
-
 }

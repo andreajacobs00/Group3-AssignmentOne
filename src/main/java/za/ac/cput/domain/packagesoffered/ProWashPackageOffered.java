@@ -3,17 +3,17 @@
  *  Andrea Jacobs 218024266
  *  04 April 2023 */
 
-package za.ac.cput.domain.packages;
+package za.ac.cput.domain.packagesoffered;
 
 import java.util.Objects;
 
-public class ProWashPackage extends Package {
+public class ProWashPackageOffered extends PackageOffered {
     private String packageId;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
 
-    private ProWashPackage(Builder builder){
+    private ProWashPackageOffered(Builder builder){
         super();
         //this.packageId = builder.packageId;
         this.packageName = builder.packageName;
@@ -44,7 +44,7 @@ public class ProWashPackage extends Package {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        ProWashPackage that = (ProWashPackage) o;
+        ProWashPackageOffered that = (ProWashPackageOffered) o;
         return Objects.equals(packageId, that.packageId);
     }
 
@@ -89,7 +89,7 @@ public class ProWashPackage extends Package {
             return this;
         }
 
-        public ProWashPackage copy (ProWashPackage proWashPackage) {
+        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {
             this.packageId = proWashPackage.packageId;
             this.packageName = proWashPackage.packageName;
             this.packageDescription = proWashPackage.packageDescription;
@@ -97,8 +97,8 @@ public class ProWashPackage extends Package {
             return null;
         }
 
-        public ProWashPackage build(Builder builder) {
-            return new ProWashPackage(this);
+        public ProWashPackageOffered build(Builder builder) {
+            return new ProWashPackageOffered(this);
         }
     }
 }
