@@ -1,3 +1,8 @@
+/*
+ * Address POJO Class
+ * Author: Haydn Abrahams
+ * Date: 04 April 2023
+ */
 package za.ac.cput.domain;
 
 import java.util.Date;
@@ -25,7 +30,7 @@ public class CustomerAddress {
         return address_ID;
     }
 
-    /*public Customer getCust_ID() {
+    /* public Customer getCust_ID() {
         return cust_ID;
     } */
 
