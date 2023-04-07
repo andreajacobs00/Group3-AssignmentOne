@@ -10,8 +10,8 @@ import java.util.Date;
 public class UserDetails {
     private String userID;
     //private Customer cust_ID;
-    private Date dateOfReg;
-    private Date loginDate;
+    private String dateOfReg;
+    private String loginDate;
     private String UserPassword;
 
     public UserDetails(Builder builder) {
@@ -27,15 +27,15 @@ public class UserDetails {
         return userID;
     }
 
-    /* public Customer getCust_ID() {
+     /* public Customer getCust_ID() {
         return cust_ID;
     } */
 
-    public Date getDateOfReg() {
+    public String getDateOfReg() {
         return dateOfReg;
     }
 
-    public Date getLoginDate() {
+    public String getLoginDate() {
         return loginDate;
     }
 
@@ -57,8 +57,8 @@ public class UserDetails {
     public static class Builder {
         private String userID;
         //private Customer cust_ID;
-        private Date dateOfReg;
-        private Date loginDate;
+        private String dateOfReg;
+        private String loginDate;
         private String UserPassword;
 
         public Builder setUserID(String userID) {
@@ -66,12 +66,12 @@ public class UserDetails {
             return this;
         }
 
-        public Builder setDateOfReg(Date dateOfReg) {
+        public Builder setDateOfReg(String dateOfReg) {
             this.dateOfReg = dateOfReg;
             return this;
         }
 
-        public Builder setLoginDate(Date loginDate) {
+        public Builder setLoginDate(String loginDate) {
             this.loginDate = loginDate;
             return this;
         }
@@ -83,7 +83,7 @@ public class UserDetails {
 
         public UserDetails.Builder copy(UserDetails details) {
             this.userID = details.userID;
-            //this.customerId = details.cust_ID;
+            //this.cust_ID = details.cust_ID;
             this.dateOfReg = details.dateOfReg;
             this.loginDate = details.loginDate;
             this.UserPassword = details.UserPassword;
