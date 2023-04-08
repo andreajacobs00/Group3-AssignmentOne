@@ -8,7 +8,7 @@ package za.ac.cput.domain;
 public class Cart {
     private String cart_ID;
     private Customer customer_ID;
-    private Product product_ID;
+    private Products product_ID;
     private int quantity;
     private double total_Amount;
 
@@ -32,7 +32,7 @@ public class Cart {
         return customer_ID;
     }
 
-    public Product getProduct_ID() {
+    public Products getProduct_ID() {
         return product_ID;
     }
 
@@ -58,7 +58,7 @@ public class Cart {
     public static class Builder{
         private String cart_ID;
         private Customer customer_ID;
-        private Product product_ID;
+        private Products product_ID;
         private int quantity;
         private double total_Amount;
 
@@ -72,7 +72,7 @@ public class Cart {
             return this;
         }
 
-        public Builder setProduct_ID(Product product_ID) {
+        public Builder setProduct_ID(Products product_ID) {
             this.product_ID = product_ID;
             return this;
         }
