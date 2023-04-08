@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Cart;
 import za.ac.cput.domain.Customer;
-import za.ac.cput.domain.Product;
+import za.ac.cput.domain.Products;
 import za.ac.cput.factory.CartFactory;
 import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.factory.ProductFactory;
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CartRepositoryTest {
     private static Customer customer = CustomerFactory.createCustomer("Cebisani", "Lamani");
-    private static Product product = ProductFactory.createProduct(" 3L Car Wash bottle Soap", 399.99);
+    private static Products product = ProductFactory.createProduct(" 3L Car Wash bottle Soap", 399.99);
     private static Cart cart = CartFactory.addCart(customer, product, 3);
     private static CartRepository cartRepository = CartRepository.getCartRepository();
 
