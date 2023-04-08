@@ -53,7 +53,7 @@ public class EmployeeAddress {
 
     @Override
     public String toString() {
-        return "EmployeeAddress{" +
+        return "EmployeeAddressFactory{" +
                 "address_ID=" + address_ID +
                 ", employee_ID=" + employee_ID.getEmployee_ID() +
                 ", house_No='" + house_No + '\'' +
