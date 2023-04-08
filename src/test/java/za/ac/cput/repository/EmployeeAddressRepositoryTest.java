@@ -8,6 +8,7 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import za.ac.cput.domain.EmployeeAddress;
 import za.ac.cput.factory.EmployeeAddressFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeAddressRepositoryRepositoryTest {
     private static Employee employee = EmployeeFactory.createEmployee("Cebisani", "Lamani", "cebisanilamani100@gmail.com");
-    private static za.ac.cput.domain.EmployeeAddress employeeAddress = EmployeeAddressFactory.createEmployeeAddress(employee, "87", "King Edward Street", "Cape Town", "7500");
+    private static EmployeeAddress employeeAddress = EmployeeAddressFactory.createEmployeeAddress(employee, "87", "King Edward Street", "Cape Town", "7500");
     private static EmployeeAddressRepository employeeAddressRepository = EmployeeAddressRepository.getEmployeeAddressRepository();
     @Test
     void a_create() {
