@@ -17,14 +17,18 @@ public class Helper {
     }
 
 
-
     public static boolean isValidEmail(String email ){
 
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
     }
 
+
     public static String generateUserID() {
         return UUID.randomUUID().toString();
     }
+
+    public static String generateBookingID(){return UUID.randomUUID().toString(); }
+
+    public static String generateProductsID(){return UUID.randomUUID().toString();}
 }
