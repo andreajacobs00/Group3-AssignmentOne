@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class CustomerAddress {
     private String address_ID;
-    //private Customer cust_ID;
+    private Customer cust_ID;
     private String house_No;
     private String streetName;
     private String suburb;
@@ -17,22 +17,21 @@ public class CustomerAddress {
 
     public CustomerAddress (Builder builder) {
         this.address_ID = builder.address_ID;
-        //this.cust_ID = builder.cust_ID;
+        this.cust_ID = builder.cust_ID;
         this.house_No = builder.house_No;
         this.streetName = builder.streetName;
         this.suburb = builder.suburb;
         this.postal_Code = Long.parseLong(builder.postal_code);
     }
-    public CustomerAddress() {
-    }
+    public CustomerAddress() {}
 
     public String getAddress_ID() {
         return address_ID;
     }
 
-    /* public Customer getCust_ID() {
+     public Customer getCust_ID() {
         return cust_ID;
-    } */
+    }
 
     public String getHouse_No() {
         return house_No;
@@ -54,7 +53,7 @@ public class CustomerAddress {
     public String toString() {
         return "CustomerAddress{" +
                 "address_ID='" + address_ID + '\'' +
-                //", cust_ID=" + cust_ID +
+                ", cust_ID=" + cust_ID +
                 ", house_No='" + house_No + '\'' +
                 ", streetName='" + streetName + '\'' +
                 ", suburb='" + suburb + '\'' +
@@ -63,7 +62,7 @@ public class CustomerAddress {
     }
     public static class Builder {
         private String address_ID;
-        //private Customer cust_ID;
+        private Customer cust_ID;
         private String house_No;
         private String streetName;
         private String suburb;
@@ -71,6 +70,11 @@ public class CustomerAddress {
 
         public Builder setAddress_ID(String address_ID) {
             this.address_ID = address_ID;
+            return this;
+        }
+
+        public Builder setCust_ID(Customer cust_ID) {
+            this.cust_ID = cust_ID;
             return this;
         }
 
@@ -96,7 +100,7 @@ public class CustomerAddress {
 
         public Builder copy(CustomerAddress customerAddress) {
             this.address_ID = customerAddress.address_ID;
-            //this.cust_ID = customerAddress.cust_ID;
+            this.cust_ID = customerAddress.cust_ID;
             this.house_No = customerAddress.house_No;
             this.streetName = customerAddress.streetName;
             this.suburb = customerAddress.suburb;

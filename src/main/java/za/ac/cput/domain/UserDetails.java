@@ -9,14 +9,14 @@ import java.util.Date;
 
 public class UserDetails {
     private String userID;
-    //private Customer cust_ID;
+    private Customer cust_ID;
     private String dateOfReg;
     private String loginDate;
     private String UserPassword;
 
     public UserDetails(Builder builder) {
         this.userID = builder.userID;
-        //this.cust_ID = builder.cust_ID;
+        this.cust_ID = builder.cust_ID;
         this.dateOfReg = builder.dateOfReg;
         this.loginDate = builder.loginDate;
         this.UserPassword = builder.UserPassword;
@@ -27,9 +27,9 @@ public class UserDetails {
         return userID;
     }
 
-     /* public Customer getCust_ID() {
+    public Customer getCust_ID() {
         return cust_ID;
-    } */
+    }
 
     public String getDateOfReg() {
         return dateOfReg;
@@ -47,7 +47,7 @@ public class UserDetails {
     public String toString() {
         return "UserDetails{" +
                 "userID='" + userID + '\'' +
-                //", customerID='" + cust_ID + '\'' +
+                ", customerID='" + cust_ID + '\'' +
                 ", dateOfReg=" + dateOfReg +
                 ", loginDate=" + loginDate +
                 ", UserPassword='" + UserPassword + '\'' +
@@ -56,13 +56,18 @@ public class UserDetails {
 
     public static class Builder {
         private String userID;
-        //private Customer cust_ID;
+        private Customer cust_ID;
         private String dateOfReg;
         private String loginDate;
         private String UserPassword;
 
         public Builder setUserID(String userID) {
             this.userID = userID;
+            return this;
+        }
+
+        public Builder setCust_ID(Customer cust_ID) {
+            this.cust_ID = cust_ID;
             return this;
         }
 
@@ -83,7 +88,7 @@ public class UserDetails {
 
         public UserDetails.Builder copy(UserDetails details) {
             this.userID = details.userID;
-            //this.cust_ID = details.cust_ID;
+            this.cust_ID = details.cust_ID;
             this.dateOfReg = details.dateOfReg;
             this.loginDate = details.loginDate;
             this.UserPassword = details.UserPassword;

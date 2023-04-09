@@ -6,6 +6,7 @@
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
+import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.CustomerAddress;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,10 +14,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerAddressFactoryTest {
     @Test
     public void createAddressTest() {
-        CustomerAddress cAddress = CustomerAddressFactory.createCustomerAddress("17",
+        Customer cust =  CustomerFactory.createCustomer("", "Kauthar", "Bloodclart");
+
+        CustomerAddress cAddress = CustomerAddressFactory.createCustomerAddress(cust,
+                "18",
                 "New Market",
-                "Wetton",
-                7780);
+                "Ottery",
+                7880);
         System.out.println(cAddress);
         assertNotNull(cAddress);
     }
