@@ -1,0 +1,72 @@
+Index: src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** Rewards.java\r\n *  This is a POJO class\r\n *  Andrea Jacobs 218024266\r\n *  04 April 2023 */\r\n\r\npackage za.ac.cput.domain.loyaltypoints;\r\n\r\nimport za.ac.cput.domain.Customer;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class Rewards {\r\n    private Tier tier;\r\n    private String rewardsId;\r\n\r\n    private Customer customerId;\r\n\r\n    private int points;\r\n\r\n    private Rewards(Builder builder) {\r\n        this.tier = builder.tier;\r\n        this.rewardsId = builder.rewardsId;\r\n        this.points = builder.points;\r\n        this.customerId = builder.customerId;\r\n    }\r\n\r\n\r\n    public Tier getTier() {\r\n        return tier;\r\n    }\r\n\r\n    public String getRewardsId() {\r\n        return rewardsId;\r\n    }\r\n\r\n    public Customer getCustomerId() {\r\n        return customerId;\r\n    }\r\n\r\n    public int getPoints() {\r\n        return points;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        Rewards rewards = (Rewards) o;\r\n        return Objects.equals(rewardsId, rewards.rewardsId);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(rewardsId);\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Rewards{\" +\r\n                \"tier=\" + tier +\r\n                \", rewardsId='\" + rewardsId + '\\'' +\r\n                \", customerId=\" + customerId +\r\n                \", points=\" + points +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder {\r\n        private Tier tier;\r\n        private String rewardsId;\r\n        private Customer customerId;\r\n        private int points;\r\n\r\n        public Builder setTier(Tier tier) {\r\n            this.tier = tier;\r\n            return this;\r\n        }\r\n\r\n        public Builder setRewardsId(String rewardsId) {\r\n            this.rewardsId = rewardsId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setCustomerId(Customer customerId) {\r\n            this.customerId = customerId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPoints(int points) {\r\n            this.points = points;\r\n            return this;\r\n        }\r\n\r\n        public Rewards build() {\r\n            return new Rewards(this);\r\n        }\r\n    }\r\n\r\n    public Builder copy (Rewards rewards) {\r\n        this.tier = rewards.tier;\r\n        this.rewardsId = rewards.rewardsId;\r\n        this.customerId = rewards.customerId;\r\n        this.points = rewards.points;\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java b/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java
+--- a/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java	(revision 3f1634287d4feb43009257c562cf96efe7338b4d)
++++ b/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java	(date 1681050006761)
+@@ -17,6 +17,8 @@
+ 
+     private int points;
+ 
++    public Rewards() {}
++
+     private Rewards(Builder builder) {
+         this.tier = builder.tier;
+         this.rewardsId = builder.rewardsId;
+Index: src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** RewardsFactory.java\r\n *  This is a factory class\r\n *  Andrea Jacobs 218024266\r\n *  06 April 2023 */\r\n\r\npackage za.ac.cput.factory.loyaltypoints;\r\n\r\nimport za.ac.cput.domain.Customer;\r\nimport za.ac.cput.domain.loyaltypoints.*;\r\nimport za.ac.cput.util.Helper;\r\n\r\npublic class RewardsFactory {\r\n    public static Rewards createRewards(Tier tier, Customer customerId, int points) {\r\n        String rewardsId = Helper.generateId();\r\n\r\n        return new Rewards.Builder().setTier(tier)\r\n                .setRewardsId(rewardsId)\r\n                .setCustomerId(customerId)\r\n                .setPoints(points)\r\n                .build();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java b/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java
+--- a/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java	(revision 3f1634287d4feb43009257c562cf96efe7338b4d)
++++ b/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java	(date 1681052487289)
+@@ -19,4 +19,6 @@
+                 .setPoints(points)
+                 .build();
+     }
++
++
+ }
+Index: src/test/java/za/ac/cput/factory/loyaltypoints/RewardsFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/factory/loyaltypoints/RewardsFactoryTest.java b/src/test/java/za/ac/cput/factory/loyaltypoints/RewardsFactoryTest.java
+new file mode 100644
+--- /dev/null	(date 1681050426184)
++++ b/src/test/java/za/ac/cput/factory/loyaltypoints/RewardsFactoryTest.java	(date 1681050426184)
+@@ -0,0 +1,25 @@
++/** RewardsFactoryTest.java
++ *  This is a test class
++ *  Andrea Jacobs 218024266
++ *  09 April 2023 */
++
++package za.ac.cput.factory.loyaltypoints;
++
++import org.junit.jupiter.api.Test;
++import za.ac.cput.domain.loyaltypoints.Rewards;
++
++import java.util.ArrayList;
++
++import static org.junit.jupiter.api.Assertions.*;
++import static za.ac.cput.domain.loyaltypoints.Tier.BRONZE;
++
++class RewardsFactoryTest {
++    @Test
++    public void createRewardsMember() {
++        Rewards rewards = RewardsFactory.createRewards(BRONZE, "123456", 5);
++        System.out.println(rewards.toString());
++        assertNotNull(rewards);
++    }
++
++
++    }
+\ No newline at end of file
