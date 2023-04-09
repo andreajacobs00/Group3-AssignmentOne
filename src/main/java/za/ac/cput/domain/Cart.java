@@ -48,7 +48,7 @@ public class Cart {
     public String toString() {
         return "Cart{" +
                 "booking_ID='" + cart_ID + '\'' +
-                ", customer_ID=" + customer_ID.getCustomer_ID() +
+                ", customer_ID=" + customer_ID.getCustId() +
                 ", product_ID=" + product_ID +
                 ", quantity=" + quantity +
                 ", total_Amount=" + total_Amount +
