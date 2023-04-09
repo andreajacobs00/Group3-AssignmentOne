@@ -1,3 +1,8 @@
+/*
+ * Products Factory class
+ * Author: Ziyaad Hendricks
+ * Student Number: 220257868
+ */
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Products;
