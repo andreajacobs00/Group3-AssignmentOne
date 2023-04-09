@@ -1,26 +1,25 @@
-/** Customer.java
- *  This is a POJO class
- *  Andrea Jacobs 218024266
- *  06 April 2023 */
-
+/*
+Author@ Joshua Edward Nolte _ 219342717
+ Domain Class for Customer
+ */
 package za.ac.cput.domain;
 
-import java.util.Objects;
-
 public class Customer {
-    private String customerId;
+
+    //Variable Names
+    private String custId;
     private String firstName;
     private String lastName;
 
-    private Customer(Builder builder) {
-        this.customerId = builder.customerId;
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
+    //private Builder Constructors
+    private Customer(Builder builder){
+        this.custId = builder. custId;
+        this.firstName = builder. firstName;
+        this.lastName = builder. lastName;
     }
-
-
-    public String getCustomerId() {
-        return customerId;
+    //Getters
+    public String getCustId() {
+        return custId;
     }
 
     public String getFirstName() {
@@ -31,35 +30,25 @@ public class Customer {
         return lastName;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Customer customer = (Customer) o;
-        return Objects.equals(customerId, customer.customerId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(customerId);
-    }
-
+    //toString
     @Override
     public String toString() {
         return "Customer{" +
-                "customerId='" + customerId + '\'' +
+                "custId='" + custId + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
 
-    public static class Builder{
-        private String customerId;
+    //Builder Class
+    public static class Builder {
+        private String custId;
         private String firstName;
         private String lastName;
 
-        public Builder setCustomerId(String customerId) {
-            this.customerId = customerId;
+        //Builder Setters
+        public Builder setCustId(String custId) {
+            this.custId = custId;
             return this;
         }
 
@@ -72,16 +61,16 @@ public class Customer {
             this.lastName = lastName;
             return this;
         }
+        //Builder Copy Object
 
-        public Builder copy(Customer customer) {
-            this.customerId = customer.customerId;
+        public Builder copy (Customer customer){
+            this.custId = customer.custId;
             this.firstName = customer.firstName;
-            this.lastName = customer.lastName;
-            return null;
+            this.lastName= customer.lastName;
+            return this;
         }
-
-        public Customer build(Builder builder) {
-            return new Customer(this);
+        public Customer build(){
+            return new Customer(this); //anonymous object
         }
     }
 }

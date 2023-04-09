@@ -1,21 +1,34 @@
-/** Helper.java
- *  This class does all functionality
- *  Andrea Jacobs 218024266
- *  06 April 2023 */
-
+/*
+ * Address POJO Class
+ * Author: Haydn Abrahams
+ * Date: 06 April 2023
+ */
 package za.ac.cput.util;
+
+import org.apache.commons.validator.EmailValidator;
 
 import java.util.UUID;
 
 public class Helper {
-    public static boolean isNullOrEmpty(String str) {
-        if(str == null || str.isEmpty()) {
-            return true;
-        }
-        return false;
+
+    public static boolean isNullorEmpty(String i) {
+        return (i == null || i.isEmpty() || i == " ");
+
     }
 
-    public static String generateId() {
+
+    public static boolean isValidEmail(String email ){
+
+        EmailValidator ev = EmailValidator.getInstance();
+        return ev.isValid(email);
+    }
+
+
+    public static String generateUserID() {
         return UUID.randomUUID().toString();
     }
+
+    public static String generateBookingID(){return UUID.randomUUID().toString(); }
+
+    public static String generateProductsID(){return UUID.randomUUID().toString();}
 }
