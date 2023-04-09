@@ -6,6 +6,8 @@
 package za.ac.cput.repository.packageoffered;
 
 import za.ac.cput.domain.packageoffered.PackageOffered;
+import za.ac.cput.repository.IRepository;
+
 import java.util.Set;
 
 public interface IPackageOffered extends IRepository<PackageOffered, String> {

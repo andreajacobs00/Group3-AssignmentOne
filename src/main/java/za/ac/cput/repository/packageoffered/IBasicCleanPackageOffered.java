@@ -6,6 +6,8 @@
 package za.ac.cput.repository.packageoffered;
 
 import za.ac.cput.domain.packageoffered.BasicCleanPackageOffered;
+import za.ac.cput.repository.IRepository;
+
 import java.util.Set;
 
 public interface IBasicCleanPackageOffered extends IRepository<BasicCleanPackageOffered, String> {

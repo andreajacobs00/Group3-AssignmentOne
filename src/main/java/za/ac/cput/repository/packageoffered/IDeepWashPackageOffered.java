@@ -6,6 +6,8 @@
 package za.ac.cput.repository.packageoffered;
 
 import za.ac.cput.domain.packageoffered.DeepWashPackageOffered;
+import za.ac.cput.repository.IRepository;
+
 import java.util.Set;
 
 public interface IDeepWashPackageOffered extends IRepository<DeepWashPackageOffered, String> {

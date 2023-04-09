@@ -6,6 +6,8 @@
 package za.ac.cput.repository.packageoffered;
 
 import za.ac.cput.domain.packageoffered.ProWashPackageOffered;
+import za.ac.cput.repository.IRepository;
+
 import java.util.Set;
 
 public interface IProWashPackageOffered extends IRepository<ProWashPackageOffered, String> {
