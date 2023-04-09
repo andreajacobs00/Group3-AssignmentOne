@@ -21,4 +21,8 @@ public class Helper {
         return UUID.randomUUID().toString();
     }
 
+    public static String generateProductsID(){
+        return UUID.randomUUID().toString();
+    }
+
 }
