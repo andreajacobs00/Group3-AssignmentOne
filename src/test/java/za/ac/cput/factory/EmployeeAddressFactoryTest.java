@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeAddressFactoryTest {
     @Test
     public void test(){
-        Employee employee = EmployeeFactory.createEmployee("Cebisani", "Lamani", "cebisanilamani100@gmail.com");
+        Employee employee = EmployeeFactory.createEmployee("219104409");
         EmployeeAddress employeeAddress = EmployeeAddressFactory.createEmployeeAddress(employee, "87", "King Edward Street", "Cape Town", "7500" );
         System.out.println(employeeAddress.toString());
         assertNotNull(employeeAddress);

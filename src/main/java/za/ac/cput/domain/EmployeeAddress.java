@@ -55,7 +55,7 @@ public class EmployeeAddress {
     public String toString() {
         return "EmployeeAddressFactory{" +
                 "address_ID=" + address_ID +
-                ", employee_ID=" + employee_ID.getEmployee_ID() +
+                ", employee_ID=" + employee_ID.getEmployeeId() +
                 ", house_No='" + house_No + '\'' +
                 ", street_Name='" + street_Name + '\'' +
                 ", suburb='" + suburb + '\'' +
