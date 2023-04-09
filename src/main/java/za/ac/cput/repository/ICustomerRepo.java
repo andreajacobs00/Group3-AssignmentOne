@@ -7,7 +7,7 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.Customer;
 import java.util.Set;
 
-public interface ICustomerRepo extends IRepo<Customer,String>{
+public interface ICustomerRepo extends IRepository<Customer,String>{
     public Set<Customer> getAll();
 
 }
