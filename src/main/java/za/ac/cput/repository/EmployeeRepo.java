@@ -49,7 +49,10 @@ public class EmployeeRepo implements IEmployeeRepo{
             employeeDB.add(employee);
             return employee;
         }
-        return null;
+        else{
+            employeeDB.add(employee);
+            return employee;
+        }
     }
 
     @Override

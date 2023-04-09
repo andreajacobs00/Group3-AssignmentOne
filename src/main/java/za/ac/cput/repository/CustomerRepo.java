@@ -50,7 +50,10 @@ public class CustomerRepo implements ICustomerRepo{
             customerDB.add(customer);
             return customer;
         }
-        return null;
+        else {
+            customerDB.add(customer);
+            return customer;
+        }
     }
 
     @Override
