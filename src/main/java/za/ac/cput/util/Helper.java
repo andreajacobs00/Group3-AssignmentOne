@@ -16,7 +16,6 @@ public class Helper {
 
     }
 
-
     public static boolean isValidEmail(String email ){
 
         EmailValidator ev = EmailValidator.getInstance();

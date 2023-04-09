@@ -9,8 +9,8 @@ import za.ac.cput.domain.packageoffered.PackageOffered;
 import za.ac.cput.util.Helper;
 
 public class PackageOfferedFactory {
-    public static PackageOffered packagesOffered(String packageDescription) {
-        String packageId = Helper.generateId();
+    public static PackageOffered createPackagesOffered(String packageDescription) {
+        String packageId = Helper.generateUserID();
 
         return new PackageOffered.Builder().setPackageId(packageId)
                 .setPackageDescription(packageDescription)

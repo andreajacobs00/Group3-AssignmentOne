@@ -11,7 +11,7 @@ import za.ac.cput.util.Helper;
 
 public class RewardsFactory {
     public static Rewards createRewards(Tier tier, Customer customerId, int points) {
-        String rewardsId = Helper.generateId();
+        String rewardsId = Helper.generateUserID();
 
         return new Rewards.Builder().setTier(tier)
                 .setRewardsId(rewardsId)
@@ -19,4 +19,6 @@ public class RewardsFactory {
                 .setPoints(points)
                 .build();
     }
+
+
 }

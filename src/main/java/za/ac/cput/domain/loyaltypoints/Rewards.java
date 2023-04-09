@@ -17,6 +17,8 @@ public class Rewards {
 
     private int points;
 
+    public Rewards() {}
+
     private Rewards(Builder builder) {
         this.tier = builder.tier;
         this.rewardsId = builder.rewardsId;
@@ -93,13 +95,13 @@ public class Rewards {
         public Rewards build() {
             return new Rewards(this);
         }
-    }
 
-    public Builder copy (Rewards rewards) {
-        this.tier = rewards.tier;
-        this.rewardsId = rewards.rewardsId;
-        this.customerId = rewards.customerId;
-        this.points = rewards.points;
-        return null;
+        public Builder copy (Rewards rewards) {
+            this.tier = rewards.tier;
+            this.rewardsId = rewards.rewardsId;
+            this.customerId = rewards.customerId;
+            this.points = rewards.points;
+            return null;
+        }
     }
 }

@@ -9,12 +9,12 @@ import za.ac.cput.domain.packageoffered.DeepWashPackageOffered;
 import za.ac.cput.util.Helper;
 
 public class DeepWashPackageOfferedFactory {
-    public static DeepWashPackageOffered deepWashPackageOffered(String packageName, String packageDescription, double price) {
-        if (Helper.isNullOrEmpty(packageName) || (Helper.isNullOrEmpty(packageDescription) || (Helper.isNullOrEmpty(String.valueOf(price))))) {
+    public static DeepWashPackageOffered createDeepWashPackageOffered(String packageName, String packageDescription, double price) {
+        if (Helper.isNullorEmpty(packageName) || (Helper.isNullorEmpty(packageDescription) || (Helper.isNullorEmpty(String.valueOf(price))))) {
             return null;
         }
 
-        String packageId = Helper.generateId();
+        String packageId = Helper.generateUserID();
 
         return new DeepWashPackageOffered.Builder().setPackageId(packageId)
                 .setPackageName(packageName)

@@ -9,12 +9,12 @@ import za.ac.cput.domain.packageoffered.ProWashPackageOffered;
 import za.ac.cput.util.Helper;
 
 public class ProWashPackageOfferedFactory {
-    public static ProWashPackageOffered proWashPackageOffered(String packageName, String packageDescription, double price) {
-        if (Helper.isNullOrEmpty(packageName) || (Helper.isNullOrEmpty(packageDescription) || (Helper.isNullOrEmpty(String.valueOf(price))))) {
+    public static ProWashPackageOffered createProWashPackageOffered(String packageName, String packageDescription, double price) {
+        if (Helper.isNullorEmpty(packageName) || (Helper.isNullorEmpty(packageDescription) || (Helper.isNullorEmpty(String.valueOf(price))))) {
             return null;
         }
 
-        String packageId = Helper.generateId();
+        String packageId = Helper.generateUserID();
 
         return new ProWashPackageOffered.Builder().setPackageId(packageId)
                 .setPackageName(packageName)
