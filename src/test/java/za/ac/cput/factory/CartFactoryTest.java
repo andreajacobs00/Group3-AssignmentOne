@@ -7,6 +7,7 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Cart;
+import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.Products;
 
 

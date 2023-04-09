@@ -9,8 +9,11 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Cart;
+import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.Products;
 import za.ac.cput.factory.CartFactory;
+import za.ac.cput.factory.CustomerFactory;
+import za.ac.cput.factory.ProductsFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
@@ -18,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CartRepositoryTest {
     private static Customer customer = CustomerFactory.createCustomer("219104409","Cebisani", "Lamani");
     private static Products product = ProductsFactory.createProductsID(" 3L Car Wash bottle Soap", 399.99);
-    private static Cart cart = CartFactory.addCart(customer, product, 3);
+    private static Cart cart = CartFactory.addCart(customer, product, 4);
     private static CartRepository cartRepository = CartRepository.getCartRepository();
 
     @Test
@@ -37,7 +40,7 @@ class CartRepositoryTest {
 
     @Test
     void c_update() {
-        Cart cart2 = new Cart.Builder().copy(cart).setQuantity(1).build();
+        Cart cart2 = new Cart.Builder().copy(cart).setQuantity(2).build();
         assertEquals(cart2, cartRepository.update(cart2));
         System.out.println("Updated:" + cart2);
     }

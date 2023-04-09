@@ -13,8 +13,6 @@ public class Helper {
         return (i == null || i.isEmpty() || i == " ");
 
     }
-
-
     public static String generateUserID() {
         return UUID.randomUUID().toString();
     }
@@ -22,4 +20,5 @@ public class Helper {
     public static String generateBookingID(){return UUID.randomUUID().toString(); }
 
     public static String generateProductsID(){return UUID.randomUUID().toString();}
+    public static String generateID(){return UUID.randomUUID().toString();}
 }
