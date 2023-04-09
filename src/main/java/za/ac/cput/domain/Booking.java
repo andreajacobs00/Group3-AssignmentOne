@@ -2,7 +2,7 @@ package za.ac.cput.domain;
 
 public class Booking {
     private String booking_ID;
-    //private Customer cust_ID;
+    private Customer custId;
     //private Car model_Type;
     //private Contact cust_No;
     //private Package package_Code;
@@ -10,7 +10,7 @@ public class Booking {
 
     public Booking(Builder builder){
         this.booking_ID = builder.booking_ID;
-        //this.cust_ID = builder.cust_ID;
+        this.custId = builder.custId;
         //this.model_Type = builder.model_Type;
         //this.cust_No = builder.cust_No;
         //this.package_Code = builder.package_Code;
@@ -24,9 +24,9 @@ public class Booking {
         return booking_ID;
     }
 
-//    public Customer getCust_ID(){
-//        return cust_ID;
-//    }
+    public Customer getCustId(){
+        return custId;
+    }
 
 //    public Car getModel_Type(){
 //        return model_Type;
@@ -48,7 +48,7 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "booking_ID='" + booking_ID + '\'' +
-//                "cust_ID=" + cust_ID + '\'' +
+                "custId=" + custId + '\'' +
 //                "model_Type=" + model_Type + '\'' +
 //                "cust_No=" + cust_No + '\'' +
 //                "package_Code" + package_Code + '\'' +
@@ -58,7 +58,7 @@ public class Booking {
 
     public static class Builder{
         private String booking_ID;
-        //private Customer cust_ID;
+        private Customer custId;
         //private Car model_Type;
         //private Contact cust_No;
         //private Package package_Code;
@@ -69,10 +69,10 @@ public class Booking {
             return this;
         }
 
-//        public Builder setCust_ID(Customer cust_ID){
-//            this.cust_ID = cust_ID;
-//            return this;
-//        }
+        public Builder setCustId(Customer custId){
+            this.custId = custId;
+            return this;
+        }
 
 //        public Builder setModel_Type(Car model_Type){
 //            this.model_Type = model_Type;
@@ -96,7 +96,7 @@ public class Booking {
 
         public Builder copy(Booking booking){
             this.booking_ID = booking.booking_ID;
-            //this.cust_ID = booking.cust_ID;
+            this.custId = booking.custId;
             //this.model_Type = booking.model_Type;
             //this.cust_No = booking.cust_No;
             //this.package_Code = booking.package_Code;
