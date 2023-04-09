@@ -15,8 +15,6 @@ public class Helper {
         return (i == null || i.isEmpty() || i == " ");
 
     }
-
-
     public static boolean isValidEmail(String email ){
 
         EmailValidator ev = EmailValidator.getInstance();
@@ -31,4 +29,5 @@ public class Helper {
     public static String generateBookingID(){return UUID.randomUUID().toString(); }
 
     public static String generateProductsID(){return UUID.randomUUID().toString();}
+    public static String generateID(){return UUID.randomUUID().toString();}
 }
