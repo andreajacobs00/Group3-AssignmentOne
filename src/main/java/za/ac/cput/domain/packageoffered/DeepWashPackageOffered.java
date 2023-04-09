@@ -93,7 +93,7 @@ public class DeepWashPackageOffered extends PackageOffered {
             return this;
         }
 
-        public DeepWashPackageOffered copy (DeepWashPackageOffered deepWashPackage) {
+        public DeepWashPackageOffered.Builder copy (DeepWashPackageOffered deepWashPackage) {
             this.packageId = deepWashPackage.packageId;
             this.packageName = deepWashPackage.packageName;
             this.packageDescription = deepWashPackage.packageDescription;

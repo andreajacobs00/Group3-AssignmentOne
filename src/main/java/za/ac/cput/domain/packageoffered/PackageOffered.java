@@ -5,6 +5,8 @@
 
 package za.ac.cput.domain.packageoffered;
 
+import za.ac.cput.domain.loyaltypoints.Rewards;
+
 import java.util.Objects;
 
 public class PackageOffered {

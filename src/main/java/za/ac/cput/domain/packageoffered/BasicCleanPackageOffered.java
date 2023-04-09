@@ -5,6 +5,8 @@
 
 package za.ac.cput.domain.packageoffered;
 
+import za.ac.cput.domain.loyaltypoints.Rewards;
+
 import java.util.Objects;
 
 public class BasicCleanPackageOffered extends PackageOffered {
@@ -93,7 +95,7 @@ public class BasicCleanPackageOffered extends PackageOffered {
             return this;
         }
 
-        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {
+        public BasicCleanPackageOffered.Builder copy (BasicCleanPackageOffered basicCleanPackage) {
             this.packageId = basicCleanPackage.packageId;
             this.packageName = basicCleanPackage.packageName;
             this.packageDescription = basicCleanPackage.packageDescription;

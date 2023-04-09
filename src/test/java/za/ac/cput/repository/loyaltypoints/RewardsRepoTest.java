@@ -8,7 +8,6 @@ package za.ac.cput.repository.loyaltypoints;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.loyaltypoints.Rewards;
-import za.ac.cput.domain.loyaltypoints.Tier;
 import za.ac.cput.factory.loyaltypoints.RewardsFactory;
 
 import static org.junit.jupiter.api.Assertions.*;

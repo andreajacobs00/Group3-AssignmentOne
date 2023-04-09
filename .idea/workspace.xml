@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47688932-a4f9-4fb9-8e48-ca5c8b6cf627" name="Changes" comment="This commit adds the ProWashPackage">
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/loyaltypoints/RewardsFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/loyaltypoints/Rewards.java" afterDir="false" />
+    <list default="true" id="47688932-a4f9-4fb9-8e48-ca5c8b6cf627" name="Changes" comment="This commit adds the test for the rewards repo">
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/loyaltypoints/RewardsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/BasicCleanPackageOfferedFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/BasicCleanPackageOfferedFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/DeepWashPackageOfferedFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/DeepWashPackageOfferedFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/ProWashPackageOfferedFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/packagesoffered/ProWashPackageOfferedFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java" afterDir="false" />
     </list>
@@ -86,6 +84,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.repository.packageoffered" />
       <recent name="za.ac.cput.repository.loyaltypoints" />
       <recent name="za.ac.cput.factory.packagesoffered" />
       <recent name="za.ac.cput.factory.loyaltypoints" />
@@ -134,7 +133,7 @@
       <workItem from="1680718626832" duration="137000" />
       <workItem from="1680780253677" duration="2854000" />
       <workItem from="1680802206324" duration="3489000" />
-      <workItem from="1681036398770" duration="16145000" />
+      <workItem from="1681036398770" duration="19632000" />
     </task>
     <task id="LOCAL-00001" summary="This commit adds the Rewards class.">
       <created>1680629542312</created>
@@ -262,7 +261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681047527853</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="This commit makes changes to claeses and adds the test for the rewards repo">
+      <created>1681063200478</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063200478</updated>
+    </task>
+    <task id="LOCAL-00020" summary="This commit adds the test for the rewards repo">
+      <created>1681063272204</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063272204</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +313,8 @@
     <MESSAGE value="This commit makes changes to classes" />
     <MESSAGE value="This commit creates the rewardsrepo and rewards interface class" />
     <MESSAGE value="This commit adds the factory class" />
-    <option name="LAST_COMMIT_MESSAGE" value="This commit adds the factory class" />
+    <MESSAGE value="This commit makes changes to claeses and adds the test for the rewards repo" />
+    <MESSAGE value="This commit adds the test for the rewards repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="This commit adds the test for the rewards repo" />
   </component>
 </project>

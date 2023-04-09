@@ -93,7 +93,7 @@ public class ProWashPackageOffered extends PackageOffered {
             return this;
         }
 
-        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {
+        public ProWashPackageOffered.Builder copy (ProWashPackageOffered proWashPackage) {
             this.packageId = proWashPackage.packageId;
             this.packageName = proWashPackage.packageName;
             this.packageDescription = proWashPackage.packageDescription;

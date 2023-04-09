@@ -30,7 +30,7 @@ class PackageOfferedFactoryTest {
 
     @Test
     public void testProWashPackageOffered() {
-        ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered("Deep Clean Option", "Basic wash, Nano Ceramic Wash, All Purpose Cleaner, One Step Swirl & Scratch Remover, All Purpose Cleaner", 550.00);
+        ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered("Deep Clean Option", "Hand wash, to soft brush detailing, waxing, polishing, wheel cleaning", 1250.00);
         System.out.println(pro.toString());
         assertNotNull(pro);
     }
