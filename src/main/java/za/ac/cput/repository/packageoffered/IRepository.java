@@ -3,7 +3,7 @@
  *  Andrea Jacobs 218024266
  *  09 April 2023 */
 
-package za.ac.cput.repository.packagesoffered;
+package za.ac.cput.repository.packageoffered;
 
 public interface IRepository <T, ID> {
     T create(T t);
