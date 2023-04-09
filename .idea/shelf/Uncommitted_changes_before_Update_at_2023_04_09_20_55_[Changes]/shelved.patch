@@ -1,0 +1,317 @@
+Index: src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** RewardsRepoTest.java\r\n *  This is a test class for the repository\r\n *  Andrea Jacobs 218024266\r\n *  09 April 2023 */\r\n\r\npackage za.ac.cput.repository.loyaltypoints;\r\n\r\nimport org.junit.jupiter.api.Test;\r\nimport za.ac.cput.domain.Customer;\r\nimport za.ac.cput.domain.loyaltypoints.Rewards;\r\nimport za.ac.cput.domain.loyaltypoints.Tier;\r\nimport za.ac.cput.factory.loyaltypoints.RewardsFactory;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\nimport static za.ac.cput.domain.loyaltypoints.Tier.BRONZE;\r\n\r\nclass RewardsRepoTest {\r\n    private static RewardsRepo repo = RewardsRepo.getRepo();\r\n    private static Customer customerId;\r\n    private static Rewards rewards = RewardsFactory.createRewards(BRONZE, customerId, 10);\r\n\r\n    @Test\r\n    void create() {\r\n        Rewards rewardsCreate =repo.create(rewards);\r\n        assertEquals(rewards.getRewardsId(), rewardsCreate.getRewardsId());\r\n        System.out.println(\"Rewards created: \" + rewardsCreate);\r\n    }\r\n\r\n    @Test\r\n    void read() {\r\n        Rewards rewardsRead = repo.read(rewards.getRewardsId());\r\n        assertNotNull(rewardsRead);\r\n        System.out.println(\"Rewards read: \" + rewardsRead);\r\n    }\r\n\r\n    @Test\r\n    void update() {\r\n        Rewards rewardsUpdate = new Rewards.Builder().copy(rewards).setRewardsId(\"654321\")\r\n                .build();\r\n        assertNotNull(repo.update(rewardsUpdate));\r\n        System.out.println(\"Rewards updated: \" + rewardsUpdate);\r\n    }\r\n\r\n    @Test\r\n    void delete() {\r\n        boolean success = repo.delete((rewards.getRewardsId()));\r\n        assertTrue(success);\r\n        System.out.println(\"Rewards deleted: \" + success);\r\n    }\r\n\r\n    @Test\r\n    void getAll() {\r\n        System.out.println(\"Show all: \" + repo.getAll());\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java b/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java
+--- a/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java	(date 1681065661311)
+@@ -8,7 +8,6 @@
+ import org.junit.jupiter.api.Test;
+ import za.ac.cput.domain.Customer;
+ import za.ac.cput.domain.loyaltypoints.Rewards;
+-import za.ac.cput.domain.loyaltypoints.Tier;
+ import za.ac.cput.factory.loyaltypoints.RewardsFactory;
+ 
+ import static org.junit.jupiter.api.Assertions.*;
+Index: src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java b/src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java
+new file mode 100644
+--- /dev/null	(date 1681066252737)
++++ b/src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java	(date 1681066252737)
+@@ -0,0 +1,53 @@
++/** BasicCleanPackageOfferedRepoTest.java
++ *  This is a test for repository
++ *  Andrea Jacobs 218024266
++ *  09 April 2023 */
++
++package za.ac.cput.repository.packageoffered;
++
++import org.junit.jupiter.api.Test;
++import za.ac.cput.domain.packageoffered.BasicCleanPackageOffered;
++import za.ac.cput.domain.packageoffered.PackageOffered;
++import za.ac.cput.factory.packagesoffered.BasicCleanPackageOfferedFactory;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++class BasicCleanPackageOfferedRepoTest {
++    private static BasicCleanPackageOfferedRepo repo = BasicCleanPackageOfferedRepo.getRepo();
++    private static BasicCleanPackageOffered basic = BasicCleanPackageOfferedFactory
++            .createBasicCleanPackageOffered("Basic Clean", "Basic wash, wheel clean, clear coat protector, rust protection", 150.00);
++
++    @Test
++    void create() {
++        BasicCleanPackageOffered basicCreate =repo.create(basic);
++        assertEquals(basic.getPackageId(), basicCreate.getPackageId());
++        System.out.println("Basic Package created: " + basicCreate);
++    }
++
++    @Test
++    void read() {
++        BasicCleanPackageOffered basicRead = repo.read(basic.getPackageId());
++        assertNotNull(basicRead);
++        System.out.println("Basic Package read: " + basicRead);
++    }
++
++    @Test
++    void update() {
++        BasicCleanPackageOffered basicUpdate = new BasicCleanPackageOffered.Builder().copy(basic).setPackageId("654321")
++                .build();
++        assertNotNull(repo.update(basicUpdate));
++        System.out.println("Rewards updated: " + basicUpdate);
++    }
++
++    @Test
++    void delete() {
++        boolean success = repo.delete((basic.getPackageId()));
++        assertTrue(success);
++        System.out.println("Basic Package deleted: " + success);
++    }
++
++    @Test
++    void getAll() {
++        System.out.println("Show all: " + repo.getAll());
++    }
++}
+Index: src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java b/src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java
+new file mode 100644
+--- /dev/null	(date 1681065661622)
++++ b/src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java	(date 1681065661622)
+@@ -0,0 +1,53 @@
++/** ProWashPackageOfferedReopTest.java
++ *  This is a test for the repository
++ *  Andrea Jacobs 218024266
++ *  09 April 2023 */
++
++package za.ac.cput.repository.packageoffered;
++
++import org.junit.jupiter.api.Test;
++import za.ac.cput.domain.packageoffered.ProWashPackageOffered;
++import za.ac.cput.factory.packagesoffered.ProWashPackageOfferedFactory;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++class ProWashPackageOfferedRepoTest {
++    private static ProWashPackageOfferedRepo repo = ProWashPackageOfferedRepo.getRepo();
++    private static ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered("Pro Wash", "Hand wash, to soft brush detailing, waxing, polishing, wheel cleaning\",", 1250.00);
++
++    @Test
++    void create() {
++        ProWashPackageOffered proCreate =repo.create(pro);
++        assertEquals(pro.getPackageId(), proCreate.getPackageId());
++        System.out.println("Pro WashPackage created: " + proCreate);
++    }
++
++    @Test
++    void read() {
++        ProWashPackageOffered proRead = repo.read(pro.getPackageId());
++        assertNotNull(proRead);
++        System.out.println("Pro Wash Packaege read: " + proRead);
++    }
++
++    @Test
++    void update() {
++        ProWashPackageOffered proUpdate = new ProWashPackageOffered.Builder().copy(pro).setPackageId("654321")
++                .build();
++        assertNotNull(repo.update(proUpdate));
++        System.out.println("Pro Wash Package updated: " + proUpdate);
++    }
++
++    @Test
++    void delete() {
++        boolean success = repo.delete((pro.getPackageId()));
++        assertTrue(success);
++        System.out.println("Rewards deleted: " + success);
++    }
++
++    @Test
++    void getAll() {
++        System.out.println("Show all: " + repo.getAll());
++    }
++
++
++}
+\ No newline at end of file
+Index: src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** BasicCleanPackage.java\r\n *  This is a subclass of package\r\n *  Andrea Jacobs 218024266\r\n *  04 April 2023 */\r\n\r\npackage za.ac.cput.domain.packageoffered;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class BasicCleanPackageOffered extends PackageOffered {\r\n    private String packageId;\r\n    private String packageName;\r\n    private String packageDescription;\r\n    private double packagePrice;\r\n\r\n    private BasicCleanPackageOffered(Builder builder){\r\n        super();\r\n        this.packageId = builder.packageId;\r\n        this.packageName = builder.packageName;\r\n        this.packageDescription = builder.packageDescription;\r\n        this.packagePrice = builder.packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageId() {\r\n        return packageId;\r\n    }\r\n\r\n    public String getPackageName() {\r\n        return packageName;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageDescription() {\r\n        return packageDescription;\r\n    }\r\n\r\n    public double getPackagePrice() {\r\n        return packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        if (!super.equals(o)) return false;\r\n        BasicCleanPackageOffered that = (BasicCleanPackageOffered) o;\r\n        return Objects.equals(packageId, that.packageId);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(super.hashCode(), packageId);\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"BasicCleanPackage{\" +\r\n                \"packageId='\" + packageId + '\\'' +\r\n                \", packageName='\" + packageName + '\\'' +\r\n                \", packageDescription='\" + packageDescription + '\\'' +\r\n                \", packagePrice=\" + packagePrice +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder {\r\n        private String packageId;\r\n        private String packageName;\r\n        private String packageDescription;\r\n        private double packagePrice;\r\n\r\n        public Builder setPackageId(String packageId) {\r\n            this.packageId = packageId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageName(String packageName) {\r\n            this.packageName = packageName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageDescription(String packageDescription) {\r\n            this.packageDescription = packageDescription;\r\n            return this;\r\n        }\r\n\r\n        public BasicCleanPackageOffered build() {\r\n            return new BasicCleanPackageOffered(this);\r\n        }\r\n\r\n        public Builder setPackagePrice(double packagePrice) {\r\n            this.packagePrice = packagePrice;\r\n            return this;\r\n        }\r\n\r\n        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {\r\n            this.packageId = basicCleanPackage.packageId;\r\n            this.packageName = basicCleanPackage.packageName;\r\n            this.packageDescription = basicCleanPackage.packageDescription;\r\n            this.packagePrice = basicCleanPackage.packagePrice;\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java b/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java
+--- a/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java	(date 1681066252567)
+@@ -5,6 +5,8 @@
+ 
+ package za.ac.cput.domain.packageoffered;
+ 
++import za.ac.cput.domain.loyaltypoints.Rewards;
++
+ import java.util.Objects;
+ 
+ public class BasicCleanPackageOffered extends PackageOffered {
+@@ -93,7 +95,7 @@
+             return this;
+         }
+ 
+-        public BasicCleanPackageOffered copy (BasicCleanPackageOffered basicCleanPackage) {
++        public BasicCleanPackageOffered.Builder copy (BasicCleanPackageOffered basicCleanPackage) {
+             this.packageId = basicCleanPackage.packageId;
+             this.packageName = basicCleanPackage.packageName;
+             this.packageDescription = basicCleanPackage.packageDescription;
+Index: src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java b/src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java
+new file mode 100644
+--- /dev/null	(date 1681065661693)
++++ b/src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java	(date 1681065661693)
+@@ -0,0 +1,57 @@
++/** DeepWashPackageOfferedRepoTest.java
++ *  This is a test for repository
++ *  Andrea Jacobs 218024266
++ *  09 April 2023 */
++
++package za.ac.cput.repository.packageoffered;
++
++import org.junit.jupiter.api.Test;
++import za.ac.cput.domain.packageoffered.DeepWashPackageOffered;
++import za.ac.cput.domain.packageoffered.ProWashPackageOffered;
++import za.ac.cput.factory.packagesoffered.DeepWashPackageOfferedFactory;
++import za.ac.cput.factory.packagesoffered.ProWashPackageOfferedFactory;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++class DeepWashPackageOfferedRepoTest {
++    private static DeepWashPackageOfferedRepo repo = DeepWashPackageOfferedRepo.getRepo();
++    private static DeepWashPackageOffered deep = DeepWashPackageOfferedFactory.createDeepWashPackageOffered("Deep Wash Package", "Basic wash, Nano Ceramic Wash, All Purpose Cleaner, One Step Swirl & Scratch Remover, All Purpose Cleaner", 550.00);
++
++    @Test
++    void create() {
++        DeepWashPackageOffered deepCreate =repo.create(deep);
++        assertEquals(deep.getPackageId(), deepCreate.getPackageId());
++        System.out.println("Deep Wash Package created: " + deepCreate);
++    }
++
++    @Test
++    void read() {
++        DeepWashPackageOffered deepRead = repo.read(deep.getPackageId());
++        assertNotNull(deepRead);
++        System.out.println("Deep Wash Package read: " + deepRead);
++    }
++
++    @Test
++    void update() {
++        DeepWashPackageOffered deepUpdate = new DeepWashPackageOffered.Builder().copy(deep).setPackageId("654321")
++                .build();
++        assertNotNull(repo.update(deepUpdate));
++        System.out.println("Deep Wash Package updated: " + deepUpdate);
++    }
++
++    @Test
++    void delete() {
++        boolean success = repo.delete((deep.getPackageId()));
++        assertTrue(success);
++        System.out.println("Deep Wash deleted: " + success);
++    }
++
++    @Test
++    void getAll() {
++        System.out.println("Show all: " + repo.getAll());
++    }
++
++
++}
++
++}
+\ No newline at end of file
+Index: src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** DeepWashPackage.java\r\n *  This is a subclass of package\r\n *  Andrea Jacobs 218024266\r\n *  04 April 2023 */\r\n\r\npackage za.ac.cput.domain.packageoffered;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class DeepWashPackageOffered extends PackageOffered {\r\n    private String packageId;\r\n    private String packageName;\r\n    private String packageDescription;\r\n    private double packagePrice;\r\n\r\n    private DeepWashPackageOffered(Builder builder){\r\n        super();\r\n        //this.packageId = builder.packageId;\r\n        this.packageName = builder.packageName;\r\n        this.packageDescription = builder.packageDescription;\r\n        this.packagePrice = builder.packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageId() {\r\n        return packageId;\r\n    }\r\n\r\n    public String getPackageName() {\r\n        return packageName;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageDescription() {\r\n        return packageDescription;\r\n    }\r\n\r\n    public double getPackagePrice() {\r\n        return packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        if (!super.equals(o)) return false;\r\n        DeepWashPackageOffered that = (DeepWashPackageOffered) o;\r\n        return Objects.equals(packageId, that.packageId);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(super.hashCode(), packageId);\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"DeepWashPackage{\" +\r\n                \"packageId='\" + packageId + '\\'' +\r\n                \", packageName='\" + packageName + '\\'' +\r\n                \", packageDescription='\" + packageDescription + '\\'' +\r\n                \", packagePrice=\" + packagePrice +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder {\r\n        private String packageId;\r\n        private String packageName;\r\n        private String packageDescription;\r\n        private double packagePrice;\r\n\r\n        public Builder setPackageId(String packageId) {\r\n            this.packageId = packageId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageName(String packageName) {\r\n            this.packageName = packageName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageDescription(String packageDescription) {\r\n            this.packageDescription = packageDescription;\r\n            return this;\r\n        }\r\n\r\n        public DeepWashPackageOffered build() {\r\n            return new DeepWashPackageOffered(this);\r\n        }\r\n\r\n        public Builder setPackagePrice(double packagePrice) {\r\n            this.packagePrice = packagePrice;\r\n            return this;\r\n        }\r\n\r\n        public DeepWashPackageOffered copy (DeepWashPackageOffered deepWashPackage) {\r\n            this.packageId = deepWashPackage.packageId;\r\n            this.packageName = deepWashPackage.packageName;\r\n            this.packageDescription = deepWashPackage.packageDescription;\r\n            this.packagePrice = deepWashPackage.packagePrice;\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java b/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java
+--- a/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java	(date 1681066252654)
+@@ -93,7 +93,7 @@
+             return this;
+         }
+ 
+-        public DeepWashPackageOffered copy (DeepWashPackageOffered deepWashPackage) {
++        public DeepWashPackageOffered.Builder copy (DeepWashPackageOffered deepWashPackage) {
+             this.packageId = deepWashPackage.packageId;
+             this.packageName = deepWashPackage.packageName;
+             this.packageDescription = deepWashPackage.packageDescription;
+Index: src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** Package.java\r\n *  This clas is a POJO class and super class\r\n *  Andrea Jacobs 218024266\r\n *  04 April 2023 */\r\n\r\npackage za.ac.cput.domain.packageoffered;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class PackageOffered {\r\n    private String packageId;\r\n    private String packageDescription;\r\n\r\n    public PackageOffered() {}\r\n\r\n    private PackageOffered(Builder builder) {\r\n        this.packageId = builder.packageId;\r\n        this.packageDescription = builder.packageDescription;\r\n    }\r\n\r\n    public String getPackageId() {\r\n        return packageId;\r\n    }\r\n\r\n    public String getPackageDescription() {\r\n        return packageDescription;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        PackageOffered aPackageOffered = (PackageOffered) o;\r\n        return Objects.equals(packageId, aPackageOffered.packageId);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(packageId);\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Package{\" +\r\n                \"packageId='\" + packageId + '\\'' +\r\n                \", packageDescription='\" + packageDescription + '\\'' +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder {\r\n        private String packageId;\r\n        private String packageDescription;\r\n\r\n        public Builder setPackageId(String packageId) {\r\n            this.packageId = packageId;\r\n            return this;\r\n        }\r\n\r\n        public PackageOffered build() {\r\n            return new PackageOffered(this);\r\n\r\n        }\r\n\r\n        public Builder setPackageDescription(String packageDescription) {\r\n            this.packageDescription = packageDescription;\r\n            return this;\r\n        }\r\n\r\n        public PackageOffered copy(Builder builder) {\r\n            this.packageId = builder.packageId;\r\n            this.packageDescription = builder.packageDescription;\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java b/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java
+--- a/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java	(date 1681065661535)
+@@ -5,6 +5,8 @@
+ 
+ package za.ac.cput.domain.packageoffered;
+ 
++import za.ac.cput.domain.loyaltypoints.Rewards;
++
+ import java.util.Objects;
+ 
+ public class PackageOffered {
+Index: src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** ProWashPackage.java\r\n *  This is a subclass of package\r\n *  Andrea Jacobs 218024266\r\n *  04 April 2023 */\r\n\r\npackage za.ac.cput.domain.packageoffered;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class ProWashPackageOffered extends PackageOffered {\r\n    private String packageId;\r\n    private String packageName;\r\n    private String packageDescription;\r\n    private double packagePrice;\r\n\r\n    private ProWashPackageOffered(Builder builder){\r\n        super();\r\n        //this.packageId = builder.packageId;\r\n        this.packageName = builder.packageName;\r\n        this.packageDescription = builder.packageDescription;\r\n        this.packagePrice = builder.packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageId() {\r\n        return packageId;\r\n    }\r\n\r\n    public String getPackageName() {\r\n        return packageName;\r\n    }\r\n\r\n    @Override\r\n    public String getPackageDescription() {\r\n        return packageDescription;\r\n    }\r\n\r\n    public double getPackagePrice() {\r\n        return packagePrice;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        if (!super.equals(o)) return false;\r\n        ProWashPackageOffered that = (ProWashPackageOffered) o;\r\n        return Objects.equals(packageId, that.packageId);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(super.hashCode(), packageId);\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"ProWashPackage{\" +\r\n                \"packageId='\" + packageId + '\\'' +\r\n                \", packageName='\" + packageName + '\\'' +\r\n                \", packageDescription='\" + packageDescription + '\\'' +\r\n                \", packagePrice=\" + packagePrice +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder {\r\n        private String packageId;\r\n        private String packageName;\r\n        private String packageDescription;\r\n        private double packagePrice;\r\n\r\n        public Builder setPackageId(String packageId) {\r\n            this.packageId = packageId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageName(String packageName) {\r\n            this.packageName = packageName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPackageDescription(String packageDescription) {\r\n            this.packageDescription = packageDescription;\r\n            return this;\r\n        }\r\n\r\n        public ProWashPackageOffered build() {\r\n            return new ProWashPackageOffered(this);\r\n        }\r\n\r\n        public Builder setPackagePrice(double packagePrice) {\r\n            this.packagePrice = packagePrice;\r\n            return this;\r\n        }\r\n\r\n        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {\r\n            this.packageId = proWashPackage.packageId;\r\n            this.packageName = proWashPackage.packageName;\r\n            this.packageDescription = proWashPackage.packageDescription;\r\n            this.packagePrice = proWashPackage.packagePrice;\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java b/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java
+--- a/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java	(date 1681066252694)
+@@ -93,7 +93,7 @@
+             return this;
+         }
+ 
+-        public ProWashPackageOffered copy (ProWashPackageOffered proWashPackage) {
++        public ProWashPackageOffered.Builder copy (ProWashPackageOffered proWashPackage) {
+             this.packageId = proWashPackage.packageId;
+             this.packageName = proWashPackage.packageName;
+             this.packageDescription = proWashPackage.packageDescription;
+Index: src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** PackageOfferedFactoryTest.java\r\n *  This is a test class\r\n *  Andrea Jacobs 218024266\r\n *  09 April 2023 */\r\n\r\npackage za.ac.cput.factory.packagesoffered;\r\n\r\nimport org.junit.jupiter.api.Test;\r\nimport za.ac.cput.domain.packageoffered.BasicCleanPackageOffered;\r\nimport za.ac.cput.domain.packageoffered.DeepWashPackageOffered;\r\nimport za.ac.cput.domain.packageoffered.ProWashPackageOffered;\r\n\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\nclass PackageOfferedFactoryTest {\r\n    @Test\r\n    public void testBasicPackageOffered() {\r\n        BasicCleanPackageOffered basic = BasicCleanPackageOfferedFactory.createBasicCleanPackageOffered(\"Basic Clean Option\", \"Basic wash, wheel clean, clear coat protector, rust protection\", 150.00);\r\n        System.out.println(basic.toString());\r\n        assertNotNull(basic);\r\n    }\r\n\r\n    @Test\r\n    public void testDeepCleanPackageOffered() {\r\n        DeepWashPackageOffered deep = DeepWashPackageOfferedFactory.createDeepWashPackageOffered(\"Deep Clean Option\", \"Basic wash, Nano Ceramic Wash, All Purpose Cleaner, One Step Swirl & Scratch Remover, All Purpose Cleaner\", 550.00);\r\n        System.out.println(deep.toString());\r\n        assertNotNull(deep);\r\n    }\r\n\r\n    @Test\r\n    public void testProWashPackageOffered() {\r\n        ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered(\"Deep Clean Option\", \"Basic wash, Nano Ceramic Wash, All Purpose Cleaner, One Step Swirl & Scratch Remover, All Purpose Cleaner\", 550.00);\r\n        System.out.println(pro.toString());\r\n        assertNotNull(pro);\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java b/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java
+--- a/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java	(revision d62d536fa66886deedb429813655c7cfc1871c00)
++++ b/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java	(date 1681065661424)
+@@ -30,7 +30,7 @@
+ 
+     @Test
+     public void testProWashPackageOffered() {
+-        ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered("Deep Clean Option", "Basic wash, Nano Ceramic Wash, All Purpose Cleaner, One Step Swirl & Scratch Remover, All Purpose Cleaner", 550.00);
++        ProWashPackageOffered pro = ProWashPackageOfferedFactory.createProWashPackageOffered("Deep Clean Option", "Hand wash, to soft brush detailing, waxing, polishing, wheel cleaning", 1250.00);
+         System.out.println(pro.toString());
+         assertNotNull(pro);
+     }

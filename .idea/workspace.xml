@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47688932-a4f9-4fb9-8e48-ca5c8b6cf627" name="Changes" comment="This commit adds the test for the rewards repo">
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/BasicCleanPackageOfferedRepoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/DeepWashPackageOfferedRepoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/packageoffered/ProWashPackageOfferedRepoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/BasicCleanPackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/DeepWashPackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/PackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/packageoffered/ProWashPackageOffered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/packagesoffered/PackageOfferedFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/loyaltypoints/RewardsRepoTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="218024266" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NyBMlu369GVNmLDWY8zLYDh2HZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Andrea Jacobs/Documents/Intellij Projects 2023/Group3-AssignmentOne",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrea Jacobs\Documents\Intellij Projects 2023\Group3-AssignmentOne\src\main\java\za\ac\cput\util" />
+      <recent name="C:\Users\Andrea Jacobs\Documents\Intellij Projects 2023\Group3-AssignmentOne\src\main\java\za\ac\cput" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.repository.packageoffered" />
+      <recent name="za.ac.cput.repository.loyaltypoints" />
+      <recent name="za.ac.cput.factory.packagesoffered" />
+      <recent name="za.ac.cput.factory.loyaltypoints" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="za.ac.cput.repository.loyaltypoints" />
+      <recent name="za.ac.cput.repository.packageoffered" />
+      <recent name="za.ac.cput.repository.packagesoffered" />
+      <recent name="za.ac.cput.factory.packagesoffered" />
+      <recent name="za.ac.cput.domain.packages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RewardsFactoryTest.createRewardsMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupThreeAssignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.loyaltypoints.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory.loyaltypoints" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.loyaltypoints.RewardsFactoryTest" />
+      <option name="METHOD_NAME" value="createRewardsMember" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RewardsFactoryTest.createRewardsMember" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47688932-a4f9-4fb9-8e48-ca5c8b6cf627" name="Changes" comment="" />
+      <created>1680626505043</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680626505043</updated>
+      <workItem from="1680626534176" duration="7283000" />
+      <workItem from="1680715908420" duration="16000" />
+      <workItem from="1680718626832" duration="137000" />
+      <workItem from="1680780253677" duration="2854000" />
+      <workItem from="1680802206324" duration="3489000" />
+      <workItem from="1681036398770" duration="19632000" />
+    </task>
+    <task id="LOCAL-00001" summary="This commit adds the Rewards class.">
+      <created>1680629542312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680629542312</updated>
+    </task>
+    <task id="LOCAL-00002" summary="This commit adds the Tier enum which sets the various tiers a customer can reach.">
+      <created>1680629607294</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680629607294</updated>
+    </task>
+    <task id="LOCAL-00003" summary="This commits updates the rewards class.">
+      <created>1680630973212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680630973213</updated>
+    </task>
+    <task id="LOCAL-00004" summary="This commit adds the super class called Package">
+      <created>1680631075904</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680631075904</updated>
+    </task>
+    <task id="LOCAL-00005" summary="This adds a default constructor to the Package class.">
+      <created>1680631435486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680631435486</updated>
+    </task>
+    <task id="LOCAL-00006" summary="This commit adds the BasicCleanPackage">
+      <created>1680632045272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680632045272</updated>
+    </task>
+    <task id="LOCAL-00007" summary="This commit adds the DeepWashPackage">
+      <created>1680632468815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680632468815</updated>
+    </task>
+    <task id="LOCAL-00008" summary="This commit adds the ProWashPackage">
+      <created>1680632627422</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680632627422</updated>
+    </task>
+    <task id="LOCAL-00009" summary="The factory class for rewards were created and some clases were updated.">
+      <created>1680782186882</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680782186882</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Factory classes were add and clasess were amended.">
+      <created>1680803487581</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680803487581</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Classes were updated and factory classes were added">
+      <created>1680804249987</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680804249987</updated>
+    </task>
+    <task id="LOCAL-00012" summary="The repository interfaces were created.">
+      <created>1681037857114</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681037857114</updated>
+    </task>
+    <task id="LOCAL-00013" summary="The interfaces for the all the packages were created">
+      <created>1681038383533</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681038383533</updated>
+    </task>
+    <task id="LOCAL-00014" summary="The BasicCleanPackageOfferedRepo is added to this commit">
+      <created>1681040868527</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681040868528</updated>
+    </task>
+    <task id="LOCAL-00015" summary="The commit adds the DeepWashPackageOfferedRepo and updates any changes made">
+      <created>1681042632179</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681042632179</updated>
+    </task>
+    <task id="LOCAL-00016" summary="This commit add the ProWashPackageOfferedRep">
+      <created>1681046427448</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681046427448</updated>
+    </task>
+    <task id="LOCAL-00017" summary="This commit makes changes to classes">
+      <created>1681046615712</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681046615712</updated>
+    </task>
+    <task id="LOCAL-00018" summary="This commit creates the rewardsrepo and rewards interface class">
+      <created>1681047527853</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681047527853</updated>
+    </task>
+    <task id="LOCAL-00019" summary="This commit makes changes to claeses and adds the test for the rewards repo">
+      <created>1681063200478</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063200478</updated>
+    </task>
+    <task id="LOCAL-00020" summary="This commit adds the test for the rewards repo">
+      <created>1681063272204</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063272204</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="This commit adds the Rewards class." />
+    <MESSAGE value="This commit adds the Tier enum which sets the various tiers a customer can reach." />
+    <MESSAGE value="This commits updates the rewards class." />
+    <MESSAGE value="This commit adds the super class called Package" />
+    <MESSAGE value="This adds a default constructor to the Package class." />
+    <MESSAGE value="This commit adds the BasicCleanPackage" />
+    <MESSAGE value="This commit adds the DeepWashPackage" />
+    <MESSAGE value="This commit adds the ProWashPackage" />
+    <MESSAGE value="The factory class for rewards were created and some clases were updated." />
+    <MESSAGE value="Factory classes were add and clasess were amended." />
+    <MESSAGE value="Classes were updated and factory classes were added" />
+    <MESSAGE value="The repository interfaces were created." />
+    <MESSAGE value="The interfaces for the all the packages were created" />
+    <MESSAGE value="The BasicCleanPackageOfferedRepo is added to this commit" />
+    <MESSAGE value="The commit adds the DeepWashPackageOfferedRepo and updates any changes made" />
+    <MESSAGE value="This commit add the ProWashPackageOfferedRepo" />
+    <MESSAGE value="This commit add the ProWashPackageOfferedRep" />
+    <MESSAGE value="This commit makes changes to classes" />
+    <MESSAGE value="This commit creates the rewardsrepo and rewards interface class" />
+    <MESSAGE value="This commit adds the factory class" />
+    <MESSAGE value="This commit makes changes to claeses and adds the test for the rewards repo" />
+    <MESSAGE value="This commit adds the test for the rewards repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="This commit adds the test for the rewards repo" />
+  </component>
+</project>
