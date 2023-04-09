@@ -1,3 +1,8 @@
+/*
+* Ziyaad Hendricks
+* 220257868
+* Booking Pojo builder class
+* */
 package za.ac.cput.domain;
 
 public class Booking {
