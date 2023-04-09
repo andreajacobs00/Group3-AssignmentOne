@@ -5,7 +5,6 @@
 
 package za.ac.cput.repository.packageoffered;
 
-import za.ac.cput.domain.packageoffered.BasicCleanPackageOffered;
 import za.ac.cput.domain.packageoffered.DeepWashPackageOffered;
 
 import java.util.HashSet;
